@@ -26,6 +26,7 @@ final class TransactionController extends AbstractController
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
         $transaction = new Transaction();
+        $transaction->setUser($this->getUser());
         $form = $this->createForm(TransactionType::class, $transaction);
         $form->handleRequest($request);
 

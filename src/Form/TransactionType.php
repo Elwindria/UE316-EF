@@ -25,10 +25,6 @@ class TransactionType extends AbstractType
                 'choice_label' => 'id',
                 'multiple' => true,
             ])
-            ->add('User', EntityType::class, [
-                'class' => User::class,
-                'choice_label' => 'id',
-            ])
         ;
     }
 
